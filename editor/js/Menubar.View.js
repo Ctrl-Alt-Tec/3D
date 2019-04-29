@@ -35,6 +35,7 @@ Menubar.View = function ( editor ) {
 
 	} );
 	options.add( option );
+	options.add( new Sidebar.Settings.Viewport( editor ) );
 
 	return container;
 
