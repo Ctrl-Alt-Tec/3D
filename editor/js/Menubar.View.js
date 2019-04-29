@@ -35,8 +35,10 @@ Menubar.View = function ( editor ) {
 
 	} );
 	options.add( option );
-	options.add( new Sidebar.Settings.Viewport( editor ) );
-
+	var option = new UI.Row();
+	option.setClass( 'option' );
+	option.add( new Sidebar.Settings.Viewport( editor ) );
+	var option = new UI.Row();
 	return container;
 
 };
