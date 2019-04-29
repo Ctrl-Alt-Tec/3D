@@ -35,7 +35,13 @@ Menubar.View = function ( editor ) {
 
 	} );
 	options.add( option );
-	options.add( new Sidebar.Settings.Viewport( editor ) );
+	
+	var show = new UI.THREE.Boolean( true ).onChange( update );
+	options.add( show );
+	function update() {
+		signals.showGridChanged.dispatch( show.getValue() );
+	}
+	
 	return container;
 
 };
