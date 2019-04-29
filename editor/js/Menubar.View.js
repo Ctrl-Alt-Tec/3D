@@ -39,7 +39,7 @@ Menubar.View = function ( editor ) {
 	} );
 	options.add( option );
 	
-	var show = new UI.THREE.Boolean( true ).onChange( update );
+	var show = new UI.THREE.Boolean( true , "Show grid").onChange( update );
 	options.add( show );
 	function update() {
 		signals.showGridChanged.dispatch( show.getValue() );
