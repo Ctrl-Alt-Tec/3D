@@ -3,6 +3,9 @@
  */
 
 Menubar.View = function ( editor ) {
+	var signals = editor.signals;
+	var strings = editor.strings;
+
 
 	var container = new UI.Panel();
 	container.setClass( 'menu' );
