@@ -35,7 +35,7 @@ Menubar.View = function ( editor ) {
 
 	} );
 	options.add( option );
-	var options.add( new Sidebar.Settings.Viewport( editor ) );
+	options.add( new Sidebar.Settings.Viewport( editor ) );
 	return container;
 
 };
