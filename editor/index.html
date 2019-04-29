@@ -24,7 +24,7 @@
         align-content: center;
         position: sticky; 
         margin: 0;
-        background-color: rgb(40,40,40);
+        background-color: #eee;
         width: 100%;
         padding: 0px;
         font-family: 'Arial';
@@ -84,9 +84,7 @@
       	<img class="logo" src="logo-name.png">
     	</div>
     	<div class="header-toolbar">
-      	<div class="header-toolbar-button" style="flex: 100; background: transparent"></div>
-      	<div class="header-toolbar-button button_together" onclick="TogetherJS(this); return false;"><i class="material-icons">live_tv</i></div>
-      	<div class="header-toolbar-button button_code"><i class="material-icons">code</i></div>
+      	
     	</div>
   	</div>
 		<link rel="stylesheet" href="css/main.css">
@@ -279,7 +277,7 @@
 			document.body.appendChild( sidebar.dom );
 
 			var menubar = new Menubar( editor );
-			document.body.appendChild( menubar.dom );
+			document.querySelector(".header-toolbar").appendChild( menubar.dom );
 
 			//
 
