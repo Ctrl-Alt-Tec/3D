@@ -13,35 +13,7 @@ Sidebar.Settings = function ( editor ) {
 	container.setPaddingTop( '20px' );
 	container.setPaddingBottom( '20px' );
 
-	// language
-
-	var options = {
-		en: 'English',
-		zh: '中文'
-	};
-
-	var languageRow = new UI.Row();
-	var language = new UI.Select().setWidth( '150px' );
-	language.setOptions( options );
-
-	if ( config.getKey( 'language' ) !== undefined ) {
-
-		language.setValue( config.getKey( 'language' ) );
-
-	}
-
-	language.onChange( function () {
-
-		var value = this.getValue();
-
-		editor.config.setKey( 'language', value );
-
-	} );
-
-	languageRow.add( new UI.Text( strings.getKey( 'sidebar/settings/language' ) ).setWidth( '90px' ) );
-	languageRow.add( language );
-
-	container.add( languageRow );
+	
 
 	// theme
 
