@@ -29,6 +29,25 @@ Menubar.File = function ( editor ) {
 	options.setClass( 'options' );
 	container.add( options );
 
+	// status
+	var autosave = new UI.THREE.Boolean( editor.config.getKey( 'autosave' ), strings.getKey( 'menubar/status/autosave' ) );
+	autosave.text.setColor( '#888' );
+	autosave.onChange( function () {
+
+		var value = this.getValue();
+
+		editor.config.setKey( 'autosave', value );
+
+		if ( value === true ) {
+
+			editor.signals.sceneGraphChanged.dispatch();
+
+		}
+
+	} );
+	options.add( autosave );
+	options.add( new UI.HorizontalRule() )
+	
 	// New
 
 	var option = new UI.Row();
