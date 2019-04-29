@@ -38,7 +38,7 @@ Menubar.View = function ( editor ) {
 	var option = new UI.Row();
 	option.setClass( 'option' );
 	option.add( new Sidebar.Settings.Viewport( editor ) );
-	var option = new UI.Row();
+	options.add( option );
 	return container;
 
 };
