@@ -20,15 +20,17 @@ button {
 	}
 
 input, textarea {
-	border: 1px solid transparent;
+	border: 1px solid rgb(160,160,160);
 	color: #444;
+	background: rgb(240,240,240);
+	border-radius: 8;
+	padding: 4px !important;
+	font-size: 14px;
 }
 
 input.Number {
 	color: #08f!important;
-	font-size: 12px;
 	border: 0px;
-	padding: 8px;
 	cursor: col-resize;
 }
 
@@ -40,12 +42,13 @@ select {
 	text-transform: uppercase;
 	cursor: pointer;
 	outline: none;
-	padding: 8px !important
+	padding: 4px !important
 }
 
 select:hover {
 	background-color: rgb(200,200,200);
 }
+
 
 /* UI */
 
@@ -56,7 +59,6 @@ select:hover {
 	right: 300px;
 	bottom: 0;
 }
-
 	#viewport #info {
 		text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
 		pointer-events: none;
@@ -132,7 +134,7 @@ select:hover {
 			#menubar .menu .options .option {
 				color: #666;
 				background-color: transparent;
-				padding: 5px 10px;
+				padding: 8px 16px;
 				margin: 0 !important;
 			}
 
@@ -155,7 +157,7 @@ select:hover {
 
 #sidebar {
 	position: sticky;
-	left: 1005;
+	left: 100%;
 	width: 300px;
 	background: white;
 	overflow: auto;
