@@ -1,7 +1,10 @@
+.header{
+	background-color: white
+}
 button {
 	color: #555;
 	border: 0px;
-	padding: 5px 8px;
+	padding: 8px;
 	text-transform: uppercase;
 	cursor: pointer;
 	outline: none;
@@ -25,7 +28,7 @@ input.Number {
 	color: #08f!important;
 	font-size: 12px;
 	border: 0px;
-	padding: 2px;
+	padding: 8px;
 	cursor: col-resize;
 }
 
@@ -37,6 +40,7 @@ select {
 	text-transform: uppercase;
 	cursor: pointer;
 	outline: none;
+	padding: 8px !important
 }
 
 select:hover {
@@ -150,10 +154,8 @@ select:hover {
 		}
 
 #sidebar {
-	position: absolute;
-	right: 0;
-	top: 32px;
-	bottom: 0;
+	position: sticky;
+	left: 1005;
 	width: 300px;
 	background: white;
 	overflow: auto;
@@ -185,13 +187,15 @@ select:hover {
 
 	#tabs span {
 		color: #aaa;
-		background-color: #eee;
+		background-color: #ddd;
 		padding: 10px;
 	}
 
 	#tabs span.selected {
 		color: #888;
 		background-color: white;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px
 	}
 
 #toolbar {
