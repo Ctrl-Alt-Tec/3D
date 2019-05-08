@@ -17,12 +17,9 @@ var Sidebar = function ( editor ) {
 	var projectTab = new UI.Text( strings.getKey( 'sidebar/project' ) ).setTextTransform( 'uppercase' );
 	projectTab.onClick( function () { select( 'PROJECT' ) } );
 
-	var settingsTab = new UI.Text( strings.getKey( 'sidebar/settings' ) ).setTextTransform( 'uppercase' );
-	settingsTab.onClick( function () { select( 'SETTINGS' ) } );
-
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
-	tabs.add( sceneTab, projectTab, settingsTab );
+	tabs.add( sceneTab, projectTab );
 	container.add( tabs );
 
 	//
