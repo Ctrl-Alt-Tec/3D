@@ -56,13 +56,18 @@ select:hover {
 	position: absolute;
 	top: 32px;
 	left: 0;
-	right: 300px;
+	right: 0;
+	/*right: 300px;*/
 	bottom: 0;
 }
 	#viewport #info {
 		text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
 		pointer-events: none;
+		display: none;
 	}
+	#viewport select {
+		bottom: 10px !important;
+		left: 10px !important;
 
 #script {
 	position: absolute;
@@ -157,6 +162,7 @@ select:hover {
 
 #sidebar {
 	position: sticky;
+	position: -webkit-sticky;
 	left: 100%;
 	width: 300px;
 	background: white;
@@ -289,6 +295,7 @@ select:hover {
 		width: 100%;
 		top: calc(100% - 320px);
 		bottom: 0;
+		height: 50%
 	}
 
 	#toolbar {
