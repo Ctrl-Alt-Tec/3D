@@ -36,15 +36,10 @@ var Sidebar = function ( editor ) {
 	container.add( scene );
 
 	var project = new UI.Span().add(
-		new Sidebar.Project( editor )
-	);
-	container.add( project );
-
-	var settings = new UI.Span().add(
-		new Sidebar.Settings( editor ),
+		new Sidebar.Project( editor ),
 		new Sidebar.History( editor )
 	);
-	container.add( settings );
+	container.add( project );
 
 	//
 
@@ -52,11 +47,9 @@ var Sidebar = function ( editor ) {
 
 		sceneTab.setClass( '' );
 		projectTab.setClass( '' );
-		settingsTab.setClass( '' );
 
 		scene.setDisplay( 'none' );
 		project.setDisplay( 'none' );
-		settings.setDisplay( 'none' );
 
 		switch ( section ) {
 			case 'SCENE':
@@ -66,10 +59,6 @@ var Sidebar = function ( editor ) {
 			case 'PROJECT':
 				projectTab.setClass( 'selected' );
 				project.setDisplay( '' );
-				break;
-			case 'SETTINGS':
-				settingsTab.setClass( 'selected' );
-				settings.setDisplay( '' );
 				break;
 		}
 
