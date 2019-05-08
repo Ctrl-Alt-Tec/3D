@@ -68,7 +68,7 @@ select:hover {
 	#viewport select {
 		bottom: 10px !important;
 		left: 10px !important;
-
+	}
 #script {
 	position: absolute;
 	top: 32px;
