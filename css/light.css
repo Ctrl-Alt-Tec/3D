@@ -167,7 +167,7 @@ select:hover {
 	position: -webkit-sticky;
 	left: 100%;
 	width: 300px;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	overflow: auto;
 	height: 100%;
 }
