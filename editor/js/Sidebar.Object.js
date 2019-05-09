@@ -73,11 +73,11 @@ Sidebar.Object = function ( editor ) {
 	// position
 
 	var objectPositionRow = new UI.Row();
-	var objectPositionX = new UI.Number().setPrecision( 3 ).setWidth( '40px' ).onChange( update );
-	var objectPositionY = new UI.Number().setPrecision( 3 ).setWidth( '40px' ).onChange( update );
-	var objectPositionZ = new UI.Number().setPrecision( 3 ).setWidth( '40px' ).onChange( update );
+	var objectPositionX = new UI.Number().setPrecision( 3 ).setWidth( '33%' ).onChange( update );
+	var objectPositionY = new UI.Number().setPrecision( 3 ).setWidth( '33%' ).onChange( update );
+	var objectPositionZ = new UI.Number().setPrecision( 3 ).setWidth( '33%' ).onChange( update );
 
-	objectPositionRow.add( new UI.Text( strings.getKey( 'sidebar/object/position' ) ).setWidth( '80px' ) );
+	objectPositionRow.add( new UI.Text( strings.getKey( 'sidebar/object/position' ) ).setWidth( '100%' ) );
 	objectPositionRow.add( objectPositionX, objectPositionY, objectPositionZ );
 
 	container.add( objectPositionRow );
@@ -85,11 +85,11 @@ Sidebar.Object = function ( editor ) {
 	// rotation
 
 	var objectRotationRow = new UI.Row();
-	var objectRotationX = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '40px' ).onChange( update );
-	var objectRotationY = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '40px' ).onChange( update );
-	var objectRotationZ = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '40px' ).onChange( update );
+	var objectRotationX = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '33%' ).onChange( update );
+	var objectRotationY = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '33%' ).onChange( update );
+	var objectRotationZ = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '33%' ).onChange( update );
 
-	objectRotationRow.add( new UI.Text( strings.getKey( 'sidebar/object/rotation' ) ).setWidth( '80px' ) );
+	objectRotationRow.add( new UI.Text( strings.getKey( 'sidebar/object/rotation' ) ).setWidth( '100%' ) );
 	objectRotationRow.add( objectRotationX, objectRotationY, objectRotationZ );
 
 	container.add( objectRotationRow );
@@ -98,11 +98,11 @@ Sidebar.Object = function ( editor ) {
 
 	var objectScaleRow = new UI.Row();
 	var objectScaleLock = new UI.Checkbox( true ).setPosition( 'absolute' ).setLeft( '75px' );
-	var objectScaleX = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '40px' ).onChange( updateScaleX );
-	var objectScaleY = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '40px' ).onChange( updateScaleY );
-	var objectScaleZ = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '40px' ).onChange( updateScaleZ );
+	var objectScaleX = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '33%' ).onChange( updateScaleX );
+	var objectScaleY = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '33%' ).onChange( updateScaleY );
+	var objectScaleZ = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '33%' ).onChange( updateScaleZ );
 
-	objectScaleRow.add( new UI.Text( strings.getKey( 'sidebar/object/scale' ) ).setWidth( '80px' ) );
+	objectScaleRow.add( new UI.Text( strings.getKey( 'sidebar/object/scale' ) ).setWidth( '100%' ) );
 	objectScaleRow.add( objectScaleLock );
 	objectScaleRow.add( objectScaleX, objectScaleY, objectScaleZ );
 
