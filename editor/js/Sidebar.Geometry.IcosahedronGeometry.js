@@ -8,7 +8,7 @@ Sidebar.Geometry.IcosahedronGeometry = function ( editor, object ) {
 
 	var signals = editor.signals;
 
-	var container = new UI.Row();
+	var container = new UI.Panel();
 
 	var geometry = object.geometry;
 	var parameters = geometry.parameters;
