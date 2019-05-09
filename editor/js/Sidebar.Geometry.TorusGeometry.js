@@ -8,7 +8,8 @@ Sidebar.Geometry.TorusGeometry = function ( editor, object ) {
 
 	var signals = editor.signals;
 
-	var container = new UI.Row();
+	var container = new UI.Panel();
+	container.setPadding('0px')
 
 	var geometry = object.geometry;
 	var parameters = geometry.parameters;
