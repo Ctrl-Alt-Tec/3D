@@ -8,8 +8,10 @@ Sidebar.Geometry.Geometry = function ( editor ) {
 
 	var signals = editor.signals;
 
-	var container = new UI.Row();
-
+	var container = new UI.Panel();
+	container.setPadding('0px');
+	container.setPaddingTop('10px');
+	
 	// vertices
 
 	var verticesRow = new UI.Row();
