@@ -35,9 +35,9 @@ Sidebar.Material = function ( editor ) {
 
 	container.add( materialSlotRow );
 
-	managerRow.add( new UI.Text( '' ).setWidth( '90px' ) );
+	//managerRow.add( new UI.Text( '' ).setWidth( '90px' ) );
 
-	managerRow.add( new UI.Button( strings.getKey( 'sidebar/material/new' ) ).onClick( function () {
+	managerRow.add( new UI.Button( strings.getKey( 'sidebar/material/new' ) ).setWidth('33%').onClick( function () {
 
 		var material = new THREE[ materialClass.getValue() ]();
 		editor.execute( new SetMaterialCommand( currentObject, material, currentMaterialSlot ), 'New Material: ' + materialClass.getValue() );
@@ -45,7 +45,7 @@ Sidebar.Material = function ( editor ) {
 
 	} ) );
 
-	managerRow.add( new UI.Button( strings.getKey( 'sidebar/material/copy' ) ).setMarginLeft( '4px' ).onClick( function () {
+	managerRow.add( new UI.Button( strings.getKey( 'sidebar/material/copy' ) ).setWidth('33%').onClick( function () {
 
 		copiedMaterial = currentObject.material;
 
@@ -59,7 +59,7 @@ Sidebar.Material = function ( editor ) {
 
 	} ) );
 
-	managerRow.add( new UI.Button( strings.getKey( 'sidebar/material/paste' ) ).setMarginLeft( '4px' ).onClick( function () {
+	managerRow.add( new UI.Button( strings.getKey( 'sidebar/material/paste' ) ).setWidth( '33%' ).onClick( function () {
 
 		if ( copiedMaterial === undefined ) return;
 
