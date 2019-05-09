@@ -9,7 +9,9 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	var signals = editor.signals;
 
 	var container = new UI.Panel();
-
+	container.setPadding('0px');
+	container.setPaddingTop('10px');
+	
 	var geometry = object.geometry;
 	var parameters = geometry.parameters;
 
