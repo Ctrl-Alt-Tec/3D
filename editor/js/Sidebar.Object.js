@@ -97,12 +97,12 @@ Sidebar.Object = function ( editor ) {
 	// scale
 
 	var objectScaleRow = new UI.Row();
-	var objectScaleLock = new UI.Checkbox( true ).setPosition( 'absolute' ).setLeft( '75px' );
+	var objectScaleLock = new UI.Checkbox( true );
 	var objectScaleX = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '33%' ).onChange( updateScaleX );
 	var objectScaleY = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '33%' ).onChange( updateScaleY );
 	var objectScaleZ = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '33%' ).onChange( updateScaleZ );
 
-	objectScaleRow.add( new UI.Text( strings.getKey( 'sidebar/object/scale' ) ).setWidth( '90px' ) );
+	objectScaleRow.add( new UI.Text( strings.getKey( 'sidebar/object/scale' ) ).setWidth( '80px' ) );
 	objectScaleRow.add( objectScaleLock );
 	objectScaleRow.add( objectScaleX, objectScaleY, objectScaleZ );
 
