@@ -23,7 +23,7 @@ Sidebar.Properties = function ( editor ) {
 
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
-	tabs.add( objectTab, geometryTab, materialTab, animationTab );
+	tabs.add( objectTab, geometryTab, materialTab );
 	container.add( tabs );
 
 	//
