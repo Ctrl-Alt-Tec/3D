@@ -294,7 +294,7 @@ Sidebar.Material = function ( editor ) {
 	materialMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/map' ) ).setWidth( '90px' ) );
 	materialMapRow.add( materialMapEnabled );
 	materialMapRow.add( materialMap );
-	materialMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialMapRow.add( new UI.Text('').setWidth( '30px' ));
 	
 	container.add( materialMapRow );
 
@@ -307,7 +307,7 @@ Sidebar.Material = function ( editor ) {
 	materialMatcapMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/matcap' ) ).setWidth( '90px' ) );
 	materialMatcapMapRow.add( materialMatcapMapEnabled );
 	materialMatcapMapRow.add( materialMatcapMap );
-	materialMatcapMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialMatcapMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialMatcapMapRow );
 
@@ -320,7 +320,7 @@ Sidebar.Material = function ( editor ) {
 	materialAlphaMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/alphamap' ) ).setWidth( '90px' ) );
 	materialAlphaMapRow.add( materialAlphaMapEnabled );
 	materialAlphaMapRow.add( materialAlphaMap );
-	materialAlphaMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialAlphaMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialAlphaMapRow );
 
@@ -347,7 +347,7 @@ Sidebar.Material = function ( editor ) {
 	materialNormalMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/normalmap' ) ).setWidth( '90px' ) );
 	materialNormalMapRow.add( materialNormalMapEnabled );
 	materialNormalMapRow.add( materialNormalMap );
-	materialNormalMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialNormalMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialNormalMapRow );
 
@@ -374,7 +374,7 @@ Sidebar.Material = function ( editor ) {
 	materialRoughnessMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/roughmap' ) ).setWidth( '90px' ) );
 	materialRoughnessMapRow.add( materialRoughnessMapEnabled );
 	materialRoughnessMapRow.add( materialRoughnessMap );
-	materialRoughnessMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialRoughnessMapRow.add( new UI.Text('').setWidth( '30px' ));
 	
 	container.add( materialRoughnessMapRow );
 
@@ -387,7 +387,7 @@ Sidebar.Material = function ( editor ) {
 	materialMetalnessMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/metalmap' ) ).setWidth( '90px' ) );
 	materialMetalnessMapRow.add( materialMetalnessMapEnabled );
 	materialMetalnessMapRow.add( materialMetalnessMap );
-	materialMetalnessMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialMetalnessMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialMetalnessMapRow );
 
@@ -400,7 +400,7 @@ Sidebar.Material = function ( editor ) {
 	materialSpecularMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/specularmap' ) ).setWidth( '90px' ) );
 	materialSpecularMapRow.add( materialSpecularMapEnabled );
 	materialSpecularMapRow.add( materialSpecularMap );
-	materialSpecularMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialSpecularMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialSpecularMapRow );
 
@@ -427,7 +427,7 @@ Sidebar.Material = function ( editor ) {
 	materialLightMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/lightmap' ) ).setWidth( '90px' ) );
 	materialLightMapRow.add( materialLightMapEnabled );
 	materialLightMapRow.add( materialLightMap );
-	materialLightMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialLightMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialLightMapRow );
 
@@ -454,7 +454,7 @@ Sidebar.Material = function ( editor ) {
 	materialEmissiveMapRow.add( new UI.Text( strings.getKey( 'sidebar/material/emissivemap' ) ).setWidth( '90px' ) );
 	materialEmissiveMapRow.add( materialEmissiveMapEnabled );
 	materialEmissiveMapRow.add( materialEmissiveMap );
-	materialEmissiveMapRow.add( new UI.Text('') ).setWidth( '30px' );
+	materialEmissiveMapRow.add( new UI.Text('').setWidth( '30px' ));
 
 	container.add( materialEmissiveMapRow );
 
