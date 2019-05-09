@@ -59,7 +59,7 @@ Sidebar.Object = function ( editor ) {
 	// name
 
 	var objectNameRow = new UI.Row();
-	var objectName = new UI.Input().setWidth( '150px' ).setFontSize( '24px' ).onChange( function () {
+	var objectName = new UI.Input().setWidth( '100%' ).setFontSize( '24px' ).onChange( function () {
 
 		editor.execute( new SetValueCommand( editor.selected, 'name', objectName.getValue() ) );
 
@@ -69,6 +69,46 @@ Sidebar.Object = function ( editor ) {
 	objectNameRow.add( objectName );
 
 	container.add( objectNameRow );
+	
+	// position
+
+	var objectPositionRow = new UI.Row();
+	var objectPositionX = new UI.Number().setPrecision( 3 ).setWidth( '40px' ).onChange( update );
+	var objectPositionY = new UI.Number().setPrecision( 3 ).setWidth( '40px' ).onChange( update );
+	var objectPositionZ = new UI.Number().setPrecision( 3 ).setWidth( '40px' ).onChange( update );
+
+	objectPositionRow.add( new UI.Text( strings.getKey( 'sidebar/object/position' ) ).setWidth( '80px' ) );
+	objectPositionRow.add( objectPositionX, objectPositionY, objectPositionZ );
+
+	container.add( objectPositionRow );
+
+	// rotation
+
+	var objectRotationRow = new UI.Row();
+	var objectRotationX = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '40px' ).onChange( update );
+	var objectRotationY = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '40px' ).onChange( update );
+	var objectRotationZ = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '40px' ).onChange( update );
+
+	objectRotationRow.add( new UI.Text( strings.getKey( 'sidebar/object/rotation' ) ).setWidth( '80px' ) );
+	objectRotationRow.add( objectRotationX, objectRotationY, objectRotationZ );
+
+	container.add( objectRotationRow );
+
+	// scale
+
+	var objectScaleRow = new UI.Row();
+	var objectScaleLock = new UI.Checkbox( true ).setPosition( 'absolute' ).setLeft( '75px' );
+	var objectScaleX = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '40px' ).onChange( updateScaleX );
+	var objectScaleY = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '40px' ).onChange( updateScaleY );
+	var objectScaleZ = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '40px' ).onChange( updateScaleZ );
+
+	objectScaleRow.add( new UI.Text( strings.getKey( 'sidebar/object/scale' ) ).setWidth( '80px' ) );
+	objectScaleRow.add( objectScaleLock );
+	objectScaleRow.add( objectScaleX, objectScaleY, objectScaleZ );
+
+	container.add( objectScaleRow );
+	
+	
 	
 	// type
 
@@ -97,44 +137,6 @@ Sidebar.Object = function ( editor ) {
 	objectUUIDRow.add( objectUUIDRenew );
 
 	container.add( objectUUIDRow );
-
-	// position
-
-	var objectPositionRow = new UI.Row();
-	var objectPositionX = new UI.Number().setPrecision( 3 ).setWidth( '50px' ).onChange( update );
-	var objectPositionY = new UI.Number().setPrecision( 3 ).setWidth( '50px' ).onChange( update );
-	var objectPositionZ = new UI.Number().setPrecision( 3 ).setWidth( '50px' ).onChange( update );
-
-	objectPositionRow.add( new UI.Text( strings.getKey( 'sidebar/object/position' ) ).setWidth( '90px' ) );
-	objectPositionRow.add( objectPositionX, objectPositionY, objectPositionZ );
-
-	container.add( objectPositionRow );
-
-	// rotation
-
-	var objectRotationRow = new UI.Row();
-	var objectRotationX = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );
-	var objectRotationY = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );
-	var objectRotationZ = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );
-
-	objectRotationRow.add( new UI.Text( strings.getKey( 'sidebar/object/rotation' ) ).setWidth( '90px' ) );
-	objectRotationRow.add( objectRotationX, objectRotationY, objectRotationZ );
-
-	container.add( objectRotationRow );
-
-	// scale
-
-	var objectScaleRow = new UI.Row();
-	var objectScaleLock = new UI.Checkbox( true ).setPosition( 'absolute' ).setLeft( '75px' );
-	var objectScaleX = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '50px' ).onChange( updateScaleX );
-	var objectScaleY = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '50px' ).onChange( updateScaleY );
-	var objectScaleZ = new UI.Number( 1 ).setPrecision( 3 ).setRange( 0.001, Infinity ).setWidth( '50px' ).onChange( updateScaleZ );
-
-	objectScaleRow.add( new UI.Text( strings.getKey( 'sidebar/object/scale' ) ).setWidth( '90px' ) );
-	objectScaleRow.add( objectScaleLock );
-	objectScaleRow.add( objectScaleX, objectScaleY, objectScaleZ );
-
-	container.add( objectScaleRow );
 
 	// fov
 
