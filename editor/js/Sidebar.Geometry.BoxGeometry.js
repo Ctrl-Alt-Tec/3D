@@ -16,9 +16,9 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	// width
 
 	var widthRow = new UI.Row();
-	var width = new UI.Number( parameters.width ).setWidth('50%').onChange( update );
+	var width = new UI.Number( parameters.width ).setWidth('calc(100% - 100px)').onChange( update );
 
-	widthRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/width' ) ).setWidth( '50%' ) );
+	widthRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/width' ) ).setWidth( '90px' ) );
 	widthRow.add( width );
 
 	container.add( widthRow );
@@ -26,9 +26,9 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	// height
 
 	var heightRow = new UI.Row();
-	var height = new UI.Number( parameters.height ).setWidth('50%').onChange( update );
+	var height = new UI.Number( parameters.height ).setWidth('calc(100% - 100px)').onChange( update );
 
-	heightRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/height' ) ).setWidth( '50%' ) );
+	heightRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/height' ) ).setWidth( '90px' ) );
 	heightRow.add( height );
 
 	container.add( heightRow );
@@ -36,9 +36,9 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	// depth
 
 	var depthRow = new UI.Row();
-	var depth = new UI.Number( parameters.depth ).setWidth('50%').onChange( update );
+	var depth = new UI.Number( parameters.depth ).setWidth('calc(100% - 100px)').onChange( update );
 
-	depthRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/depth' ) ).setWidth( '50%' ) );
+	depthRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/depth' ) ).setWidth( '90px' ) );
 	depthRow.add( depth );
 
 	container.add( depthRow );
@@ -46,7 +46,7 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	// widthSegments
 
 	var widthSegmentsRow = new UI.Row();
-	var widthSegments = new UI.Integer( parameters.widthSegments ).setRange( 1, Infinity ).onChange( update );
+	var widthSegments = new UI.Integer( parameters.widthSegments ).setWidth('calc(100% - 100px)').setRange( 1, Infinity ).onChange( update );
 
 	widthSegmentsRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/widthseg' ) ).setWidth( '90px' ) );
 	widthSegmentsRow.add( widthSegments );
@@ -56,7 +56,7 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	// heightSegments
 
 	var heightSegmentsRow = new UI.Row();
-	var heightSegments = new UI.Integer( parameters.heightSegments ).setRange( 1, Infinity ).onChange( update );
+	var heightSegments = new UI.Integer( parameters.heightSegments ).setWidth('calc(100% - 100px)').setRange( 1, Infinity ).onChange( update );
 
 	heightSegmentsRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/heightseg' ) ).setWidth( '90px' ) );
 	heightSegmentsRow.add( heightSegments );
@@ -66,7 +66,7 @@ Sidebar.Geometry.BoxGeometry = function ( editor, object ) {
 	// depthSegments
 
 	var depthSegmentsRow = new UI.Row();
-	var depthSegments = new UI.Integer( parameters.depthSegments ).setRange( 1, Infinity ).onChange( update );
+	var depthSegments = new UI.Integer( parameters.depthSegments ).setWidth('calc(100% - 100px)').setRange( 1, Infinity ).onChange( update );
 
 	depthSegmentsRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/depthseg' ) ).setWidth( '90px' ) );
 	depthSegmentsRow.add( depthSegments );
