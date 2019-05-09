@@ -8,7 +8,7 @@ Sidebar.Geometry.BufferGeometry = function ( editor ) {
 
 	var signals = editor.signals;
 
-	var container = new UI.Panel();
+	var container = new UI.Row();
 	container.setPadding('0px');
 	container.setPaddingTop('10px');
 	
