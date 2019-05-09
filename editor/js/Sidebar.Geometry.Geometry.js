@@ -8,7 +8,7 @@ Sidebar.Geometry.Geometry = function ( editor ) {
 
 	var signals = editor.signals;
 
-	var container = new UI.Row();
+	var container = new UI.Panel();
 
 	// vertices
 
