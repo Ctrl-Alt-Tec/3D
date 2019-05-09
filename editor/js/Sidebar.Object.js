@@ -56,6 +56,20 @@ Sidebar.Object = function ( editor ) {
 	container.addStatic( objectActions );
 	*/
 
+	// name
+
+	var objectNameRow = new UI.Row();
+	var objectName = new UI.Input().setWidth( '150px' ).setFontSize( '24px' ).onChange( function () {
+
+		editor.execute( new SetValueCommand( editor.selected, 'name', objectName.getValue() ) );
+
+	} );
+
+	//objectNameRow.add( new UI.Text( strings.getKey( 'sidebar/object/name' ) ).setWidth( '90px' ) );
+	objectNameRow.add( objectName );
+
+	container.add( objectNameRow );
+	
 	// type
 
 	var objectTypeRow = new UI.Row();
@@ -83,20 +97,6 @@ Sidebar.Object = function ( editor ) {
 	objectUUIDRow.add( objectUUIDRenew );
 
 	container.add( objectUUIDRow );
-
-	// name
-
-	var objectNameRow = new UI.Row();
-	var objectName = new UI.Input().setWidth( '150px' ).setFontSize( '12px' ).onChange( function () {
-
-		editor.execute( new SetValueCommand( editor.selected, 'name', objectName.getValue() ) );
-
-	} );
-
-	objectNameRow.add( new UI.Text( strings.getKey( 'sidebar/object/name' ) ).setWidth( '90px' ) );
-	objectNameRow.add( objectName );
-
-	container.add( objectNameRow );
 
 	// position
 
