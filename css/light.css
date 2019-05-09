@@ -22,7 +22,7 @@ button {
 input, textarea {
 	
 	color: #444;
-	background: white;
+	background: white !important;
 	border-radius: 8px !important;
 	padding: 4px !important;
 	font-size: 16px;
@@ -191,7 +191,8 @@ select:hover {
 		min-height: 20px;
 		margin-bottom: 10px;
 		display: flex;
-		justify-content: space-between
+		justify-content: space-between;
+		align-items: center;
 	}
 
 #tabs {
