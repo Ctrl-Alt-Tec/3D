@@ -20,10 +20,10 @@ button {
 	}
 
 input, textarea {
-	border: 1px solid rgb(160,160,160);
+	border: 1px solid rgb(200,200,200) !important;
 	color: #444;
-	background: rgb(240,240,240);
-	border-radius: 8;
+	background: white;
+	border-radius: 8px !important;
 	padding: 4px !important;
 	font-size: 14px;
 }
