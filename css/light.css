@@ -33,6 +33,7 @@ input.Number {
 	color: #08f!important;
 	border: 0px;
 	cursor: col-resize;
+	width: 100px;
 }
 
 select {
