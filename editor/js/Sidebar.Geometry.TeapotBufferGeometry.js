@@ -4,8 +4,8 @@
 
 Sidebar.Geometry.TeapotBufferGeometry = function ( signals, object ) {
 
-	var container = new UI.Row();
-
+	var container = new UI.Panel();
+	container.setPadding('0px')
 	var parameters = object.geometry.parameters;
 
 	// size
