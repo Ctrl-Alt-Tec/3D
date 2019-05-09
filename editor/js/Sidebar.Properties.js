@@ -19,7 +19,7 @@ Sidebar.Properties = function ( editor ) {
 	materialTab.onClick( function () { select( 'MATERIAL' ) } );
 	
 	var animationTab = new UI.Text( strings.getKey( 'sidebar/properties/animation' ) ).setTextTransform( 'uppercase' );
-	materialTab.onClick( function () { select( 'ANIMATION' ) } );
+	animationTab.onClick( function () { select( 'ANIMATION' ) } );
 
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
