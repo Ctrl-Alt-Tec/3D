@@ -9,7 +9,9 @@ Sidebar.Geometry.BufferGeometry = function ( editor ) {
 	var signals = editor.signals;
 
 	var container = new UI.Panel();
-
+	container.setPadding('0px');
+	container.setPaddingTop('10px');
+	
 	function update( object ) {
 
 		if ( object === null ) return; // objectSelected.dispatch( null )
