@@ -35,6 +35,7 @@ var Strings = function ( config ) {
 
 			'menubar/add': 'Add',
 			'menubar/add/group': 'Group',
+			'menubar/add/text': 'Text',
 			'menubar/add/plane': 'Plane',
 			'menubar/add/box': 'Box',
 			'menubar/add/circle': 'Circle',
@@ -77,6 +78,7 @@ var Strings = function ( config ) {
 			'sidebar/properties/geometry': 'Geometry',
 			'sidebar/properties/material': 'Material',
 			'sidebar/properties/script': 'Script',
+			'sidebar/properties/text': 'Text'. 
 
 			'sidebar/object/type': 'Type',
 			'sidebar/object/new': 'New',
