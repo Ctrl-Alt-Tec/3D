@@ -65,11 +65,13 @@ Sidebar.Properties = function ( editor ) {
 		geometryTab.setClass( '' );
 		materialTab.setClass( '' );
 		animationTab.setClass( '' );
+		textTab.setClass( '' )
 		
 		object.setDisplay( 'none' );
 		geometry.setDisplay( 'none' );
 		material.setDisplay( 'none' );
 		animation.setDisplay( 'none' );
+		textt.setDisplay( 'none' );
 		
 		switch ( section ) {
 			case 'OBJECT':
