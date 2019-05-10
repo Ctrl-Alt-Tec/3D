@@ -37,6 +37,36 @@ Menubar.Add = function ( editor ) {
 
 	options.add( new UI.HorizontalRule() );
 
+	// Text
+	
+	var option = new UI.Row();
+	option.setClass( 'option' );
+	option.setTextContent( strings.getKey( 'menubar/add/text' ) );
+	option.onClick( function () {
+		var textValue = prompt("Text");
+		var fontLoader = new THREE.FontLoader();
+		fontLoader.load("examples/fonts/helvetiker_regular.typeface.json", function(font){
+			var geometry = new THREE.TextGeometry( 'Hello three.js!', {
+				font: font,
+				size: 80,
+				height: 5,
+				curveSegments: 12,
+				bevelEnabled: true,
+				bevelThickness: 10,
+				bevelSize: 8,
+				bevelOffset: 0,
+				bevelSegments: 5
+			} );
+			var mesh = new THREE.Mesh( geometry, new THREE.MeshStandardMaterial() );
+			mesh.name = 'Text';
+			editor.execute( new AddObjectCommand( mesh ) );
+		})
+	})
+		
+	//
+	
+	options.add( new UI.HorizontalRule() );
+	
 	// Plane
 
 	var option = new UI.Row();
