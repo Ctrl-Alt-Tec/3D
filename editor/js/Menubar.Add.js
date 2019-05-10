@@ -48,14 +48,14 @@ Menubar.Add = function ( editor ) {
 		fontLoader.load("examples/fonts/helvetiker_regular.typeface.json", function(font){
 			var geometry = new THREE.TextGeometry( 'Hello three.js!', {
 				font: font,
-				size: 80,
-				height: 5,
-				curveSegments: 12,
+				size: 8,
+				height: 2,
+				curveSegments: 5,
 				bevelEnabled: true,
-				bevelThickness: 10,
+				bevelThickness: 5,
 				bevelSize: 8,
 				bevelOffset: 0,
-				bevelSegments: 5
+				bevelSegments: 1
 			} );
 			var mesh = new THREE.Mesh( geometry, new THREE.MeshStandardMaterial() );
 			mesh.name = 'Text';
