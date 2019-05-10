@@ -13,6 +13,17 @@
   container.setBorderTop( '0' );
 	container.setPaddingTop( '20px' );
   
+	// Edit text
+	
+	var textRow = new UI.Row();
+	var objectText = new UI.Input().setWidth( '100%' ).setFontSize( '24px' ).onChange( function () {
+		editor.selected.geometry = new THREE.TextGeometry(objectText.getValue(), editor.selected.geometry.parameters.parameters)
+		editor.execute( new AddObjectCommand( editor.selected ) );
+	} );
+	 
+	//
+	 
+	 
   container.add(new UI.Text('qwertyuiop'));
   
   return container;
