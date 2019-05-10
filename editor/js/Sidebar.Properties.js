@@ -20,10 +20,12 @@ Sidebar.Properties = function ( editor ) {
 	
 	var animationTab = new UI.Text( strings.getKey( 'sidebar/properties/animation' ) ).setTextTransform( 'uppercase' );
 	animationTab.onClick( function () { select( 'ANIMATION' ) } );
-
+	
+	var fontTab = new UI.Text( strings.getKey( 'sidebar/properties/font' ) ).setTextTransform( 'uppercase' ).setDisplay('none');
+	
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
-	tabs.add( objectTab, geometryTab, materialTab );
+	tabs.add( objectTab, geometryTab, materialTab, fontTab );
 	container.add( tabs );
 
 	//
@@ -84,6 +86,16 @@ Sidebar.Properties = function ( editor ) {
 	}
 
 	select( 'OBJECT' );
+	
+	//
+	
+	editor.signals.objectSelected.add(function(obj){
+		if(obj.geometry.type == "TextGeometry"){
+			fontTab.setDisplay('');
+		}else{
+			fontTab.setDisplay('none');
+		}
+	})
 
 	return container;
 
