@@ -24,7 +24,7 @@
 	container.add(textRow)
 	//
 	 
-	container.add(new UI.horizontalRule())
+	container.add(new UI.HorizontalRule())
 	 
 	//
   var fontSizeRow = new UI.Row();
