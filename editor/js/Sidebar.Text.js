@@ -33,7 +33,9 @@
 		editor.execute(new AddObjectCommand( editor.selected ))
 	} )
 
-	widthRow.add( new UI.Text( strings.getKey( 'sidebar/geometry/box_geometry/width' ) ).setWidth( '90px' ) );
+	fontSizeRow.add( new UI.Text( strings.getKey( 'sidebar/text/fontsize' ) ).setWidth( '90px' ) );
+	fontSizeRow.add(fontSizee);
+	container.add(fontSizeRow)
   
   return container;
  }
