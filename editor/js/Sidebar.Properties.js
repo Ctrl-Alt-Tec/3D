@@ -21,11 +21,13 @@ Sidebar.Properties = function ( editor ) {
 	var animationTab = new UI.Text( strings.getKey( 'sidebar/properties/animation' ) ).setTextTransform( 'uppercase' );
 	animationTab.onClick( function () { select( 'ANIMATION' ) } );
 	
-	var fontTab = new UI.Text( strings.getKey( 'sidebar/properties/font' ) ).setTextTransform( 'uppercase' ).setDisplay('none');
+	var textTab = new UI.Text( strings.getKey( 'sidebar/properties/text' ) ).setTextTransform( 'uppercase' ).setDisplay('none');
+	textTab.onClick( function () { select( 'TEXT' ) } );
+	
 	
 	var tabs = new UI.Div();
 	tabs.setId( 'tabs' );
-	tabs.add( objectTab, objectTab, geometryTab, materialTab, fontTab );
+	tabs.add( objectTab, geometryTab, materialTab, textTab );
 	container.add( tabs );
 
 	//
@@ -49,6 +51,11 @@ Sidebar.Properties = function ( editor ) {
 		new Sidebar.Animation( editor )
 	);
 	container.add( animation );
+	
+	var textt = new UI.Span().add(
+		new Sidebar.Text( editor )
+	);
+	container.add( textt );
 
 	//
 
@@ -80,6 +87,10 @@ Sidebar.Properties = function ( editor ) {
 			case 'ANIMATION':
 				animationTab.setClass( 'selected' );
 				animation.setDisplay( '' );
+				break;
+			case 'TEXT':
+				textTab.setClass( 'selected' );
+				textt.setDisplay( '' );
 				break;
 		}
 
