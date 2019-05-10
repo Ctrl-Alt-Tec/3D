@@ -78,7 +78,7 @@ var Strings = function ( config ) {
 			'sidebar/properties/geometry': 'Geometry',
 			'sidebar/properties/material': 'Material',
 			'sidebar/properties/script': 'Script',
-			'sidebar/properties/text': 'Text'. 
+			'sidebar/properties/text': 'Text', 
 
 			'sidebar/object/type': 'Type',
 			'sidebar/object/new': 'New',
