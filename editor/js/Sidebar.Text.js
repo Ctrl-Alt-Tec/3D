@@ -28,7 +28,7 @@
 	 
 	//
   var fontSizeRow = new UI.Row();
-	var fontSizee = new UI.Number( editor.selected.geometry.parameters.parameters.size ).setWidth('calc(100% - 100px)').onChange( function(){
+	var fontSizee = new UI.Number( editor.selected != null ? editor.selected.geometry.parameters.parameters.size : '').setWidth('calc(100% - 100px)').onChange( function(){
 		editor.selected.geometry.parameters.parameters.size = fontSizee.getValue();
 		editor.execute(new AddObjectCommand( editor.selected ))
 	} )
