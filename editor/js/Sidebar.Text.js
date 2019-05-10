@@ -20,7 +20,7 @@
 		editor.selected.geometry = new THREE.TextGeometry(objectText.getValue(), editor.selected.geometry.parameters.parameters)
 		editor.execute( new AddObjectCommand( editor.selected ) );
 	} );
-	 
+	textRow.add(objectText)
 	//
 	container.add(textRow)
 	 
