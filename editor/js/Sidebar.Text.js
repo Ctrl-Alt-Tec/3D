@@ -22,7 +22,7 @@
 	} );
 	 
 	//
-	 
+	container.add(textRow)
 	 
   container.add(new UI.Text('qwertyuiop'));
   
