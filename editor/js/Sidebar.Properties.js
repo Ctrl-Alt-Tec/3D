@@ -102,9 +102,9 @@ Sidebar.Properties = function ( editor ) {
 	
 	editor.signals.objectSelected.add(function(obj){
 		if(obj!=null && obj.geometry.type == "TextGeometry"){
-			fontTab.setDisplay('');
+			textTab.setDisplay('');
 		}else{
-			fontTab.setDisplay('none');
+			textTab.setDisplay('none');
 		}
 	})
 
