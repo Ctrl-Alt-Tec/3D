@@ -60,9 +60,10 @@ Menubar.Add = function ( editor ) {
 			var mesh = new THREE.Mesh( geometry, new THREE.MeshStandardMaterial() );
 			mesh.name = 'Text';
 			editor.execute( new AddObjectCommand( mesh ) );
-		})
-	})
-		
+		});
+	});
+	options.add(option);
+	
 	//
 	
 	options.add( new UI.HorizontalRule() );
