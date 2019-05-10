@@ -90,7 +90,7 @@ Sidebar.Properties = function ( editor ) {
 	//
 	
 	editor.signals.objectSelected.add(function(obj){
-		if(obj.geometry.type == "TextGeometry" && obj!=null){
+		if(obj!=null && obj.geometry.type == "TextGeometry"){
 			fontTab.setDisplay('');
 		}else{
 			fontTab.setDisplay('none');
