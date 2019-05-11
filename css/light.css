@@ -204,6 +204,11 @@ select:hover {
 		justify-content: space-between;
 		align-items: center;
 	}
+	
+	#Sidebar #tabs{
+		position: sticky;
+		top: 0;
+	}
 
 #tabs {
 	background-color: #ddd;
