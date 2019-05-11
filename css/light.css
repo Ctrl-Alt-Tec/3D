@@ -206,7 +206,7 @@ select:hover {
 		align-items: center;
 	}
 	
-	#Sidebar #tabs{
+	#sidebar #tabs{
 		position: sticky;
 		top: 0;
 	}
