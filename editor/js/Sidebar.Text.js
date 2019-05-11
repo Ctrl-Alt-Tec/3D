@@ -15,15 +15,15 @@
   
 	// Edit text
 	container.add(new UI.Text('Text value'));
-	var textRow = new UI.Row();
 	editor.signals.objectSelected.add(function(obj){ if(obj!=null && obj.geometry.type == "TextGeometry"){
+		var textRow = new UI.Row();
 		var objectText = new UI.Input(editor.selected.geometry.parameters.text).setWidth( '100%' ).setFontSize( '24px' ).onChange( function(){
 			editor.selected.geometry = new THREE.TextGeometry(objectText.getValue(), editor.selected.geometry.parameters.parameters)
 			editor.execute( new AddObjectCommand( editor.selected ) );
 		} );
 		textRow.add(objectText)
-		container.add(textRow)
 	}});
+	container.add(textRow)
 	 
 	 
 	
@@ -32,8 +32,8 @@
 	container.add(new UI.HorizontalRule())
 	 
 	//
-  var fontSizeRow = new UI.Row();
 	editor.signals.objectSelected.add(function(obj){ if(obj!=null && obj.geometry.type == "TextGeometry"){ 	 
+  	var fontSizeRow = new UI.Row();
 		var fontSizee = new UI.Number( editor.selected.geometry.parameters.parameters.size).setWidth('calc(100% - 100px)').onChange( function(){
 			editor.selected.geometry.parameters.parameters.size = fontSizee.getValue();
 			editor.selected.geometry = new THREE.TextGeometry(editor.selected.geometry.parameters.text, editor.selected.geometry.parameters.parameters)
@@ -42,8 +42,8 @@
 
 		fontSizeRow.add( new UI.Text( strings.getKey( 'sidebar/text/fontsize' ) ).setWidth( '90px' ) );
 		fontSizeRow.add(fontSizee);
-		container.add(fontSizeRow);
 	}});
+	container.add(fontSizeRow);
   
   return container;
  }
