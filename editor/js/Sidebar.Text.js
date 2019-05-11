@@ -14,21 +14,28 @@
 	container.setPaddingTop( '20px' );
   
 	// Edit text
-	container.add(new UI.Text('Text value'));
-	var textRow = new UI.Row();
-	var objectText = new UI.Input(editor.selected != null ? editor.selected.geometry.parameters.text : 'text').setWidth( '100%' ).setFontSize( '24px' ).onChange( function(){
-		editor.selected.geometry = new THREE.TextGeometry(objectText.getValue(), editor.selected.geometry.parameters.parameters)
-		editor.execute( new AddObjectCommand( editor.selected ) );
-	} );
-	textRow.add(objectText)
-	container.add(textRow)
+	editor.signals.objectSelected.add(function(obj){
+		if(obj!=null && obj.geometry.type == "TextGeometry"){
+			container.add(new UI.Text('Text value'));
+			var textRow = new UI.Row();
+			var objectText = new UI.Input(editor.selected.geometry.parameters.text).setWidth( '100%' ).setFontSize( '24px' ).onChange( function(){
+				editor.selected.geometry = new THREE.TextGeometry(objectText.getValue(), editor.selected.geometry.parameters.parameters)
+				editor.execute( new AddObjectCommand( editor.selected ) );
+			} );
+			textRow.add(objectText)
+			container.add(textRow)
+		}
+	});
+	 
+	 
+	
 	//
 	 
 	container.add(new UI.HorizontalRule())
 	 
 	//
   var fontSizeRow = new UI.Row();
-	var fontSizee = new UI.Number( editor.selected != null ? editor.selected.geometry.parameters.parameters.size : 2).setWidth('calc(100% - 100px)').onChange( function(){
+	var fontSizee = new UI.Number( editor.selected == null ? 2 : editor.selected.geometry.parameters.parameters.size).setWidth('calc(100% - 100px)').onChange( function(){
 		editor.selected.geometry.parameters.parameters.size = fontSizee.getValue();
 		editor.selected.geometry = new THREE.TextGeometry(editor.selected.geometry.parameters.text, editor.selected.geometry.parameters.parameters)
 		editor.execute(new AddObjectCommand( editor.selected ))
