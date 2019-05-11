@@ -40,7 +40,7 @@
 			editor.execute(new AddObjectCommand( editor.selected ))
 		} )
 
-		fontSizeRow.add( new UI.Text( strings.getKey( 'Font Size' ) ).setWidth( '90px' ) );
+		fontSizeRow.add( new UI.Text('Font Size' ).setWidth( '90px' ) );
 		fontSizeRow.add(fontSizee);
 		container.add(fontSizeRow);
 	}});
