@@ -1,5 +1,6 @@
 .header{
-	background-color: white
+	background-color: white;
+	position: -webkit-sticky;
 }
 button {
 	color: #555;
@@ -208,6 +209,7 @@ select:hover {
 	
 	#sidebar #tabs{
 		position: sticky;
+		position: -webkit-sticky;
 		top: 0;
 	}
 
