@@ -108,6 +108,7 @@ select:hover {
 		float: left;
 		cursor: pointer;
 		padding-right: 8px;
+		color: #888;
 	}
 	#menubar .menu:hover{
 		background-color: rgb(0,122,255);
@@ -123,7 +124,7 @@ select:hover {
 
 		#menubar .menu .title {
 			display: inline-block;
-			color: #888;
+			color: inherit;
 			margin: 0;
 			padding: 8px;
 			line-height: 16px;
@@ -137,6 +138,7 @@ select:hover {
 			width: 150px;
 			max-height: calc(100% - 80px);
 			overflow: auto;
+			border-radius: 4px
 		}
 
 		#menubar .menu:hover .options {
@@ -175,7 +177,7 @@ select:hover {
 	position: sticky;
 	position: -webkit-sticky;
 	left: 100%;
-	width: 300px;
+	width: 350px;
 	background: rgba(255,255,255,0.95);
 	overflow: auto;
 	height: 100%;
@@ -206,19 +208,27 @@ select:hover {
 #tabs {
 	background-color: #ddd;
 	border-top: 1px solid #ccc;
+	display: flex;
 }
 
 	#tabs span {
 		color: #aaa;
 		background-color: #ddd;
-		padding: 10px;
+		padding: 8px;
+		border-bottom: 0.5px solid #bdbdbd;
+		flex: 1;
+		text-transform: capitalize;
+		text-align: center;
 	}
 
 	#tabs span.selected {
 		color: #888;
 		background-color: white;
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		border: 0.5px solid #bdbdbd;
+		border-bottom: none;
+		font-weight: 600;
 	}
 
 #toolbar {
