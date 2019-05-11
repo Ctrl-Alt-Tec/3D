@@ -16,7 +16,7 @@
 	// Edit text
 	container.add(new UI.Text('Text value'));
 	var textRow = new UI.Row();
-	var objectText = new UI.Input(editor.selected.geometry.parameters.text).setWidth( '100%' ).setFontSize( '24px' ).onChange( function(){
+	var objectText = new UI.Input(editor.selected != null ? editor.selected.geometry.parameters.text : 'text').setWidth( '100%' ).setFontSize( '24px' ).onChange( function(){
 		editor.selected.geometry = new THREE.TextGeometry(objectText.getValue(), editor.selected.geometry.parameters.parameters)
 		editor.execute( new AddObjectCommand( editor.selected ) );
 	} );
