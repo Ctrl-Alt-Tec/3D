@@ -328,14 +328,14 @@ select:hover {
 		width: 100%;
 		top: calc(100% - 320px);
 		bottom: 0;
-		height: 50%;
+		height: 40%;
 		background-color: white
 	}
 
 	#toolbar {
 		left: calc(50% - 140px);
 		width: 280px;
-		top: 68px;
+		top: 128px;
 	}
 
 }
