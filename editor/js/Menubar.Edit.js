@@ -113,7 +113,7 @@ Menubar.Edit = function ( editor ) {
 	option.setTextContent( 'Paste' );
 	option.onClick(function(){
 		if(clipboard!=undefined){
-			editor.execute(new AddObjectCommand(clipboard))
+			editor.execute(new AddObjectCommand(clipboard.clone()))
 		}
 	})
 	options.add(option);
