@@ -89,18 +89,18 @@ Menubar.Edit = function ( editor ) {
 	// Cut
 	var option = new UI.Row();
 	option.setClass('option');
-	option.setTextContent('cut');
+	option.setTextContent('Cut');
 	option.onClick(function(){
 		if(editor.selected.parent === undefined) return;
 		clipboard = editor.selected.clone();
-		editor.execute(new RemoveObjectCommand(this.selected));
+		editor.execute(new RemoveObjectCommand(editor.selected));
 	})
 	options.add(option);
 	
 	//Copy
 	var option = new UI.Row();
 	option.setClass('option');
-	option.setTextContent('copy')
+	option.setTextContent('Copy')
 	option.onClick(function(){
 		if(editor.selected.parent === undefined) return;
 		clipboard = editor.selected.clone();
@@ -110,7 +110,7 @@ Menubar.Edit = function ( editor ) {
 	// Paste
 	var option = new UI.Row();
 	option.setClass( 'option' );
-	option.setTextContent( 'paste' );
+	option.setTextContent( 'Paste' );
 	option.onClick(function(){
 		if(clipboard!=undefined){
 			editor.execute(new AddObjectCommand(clipboard))
