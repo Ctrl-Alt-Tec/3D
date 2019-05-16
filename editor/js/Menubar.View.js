@@ -39,11 +39,23 @@ Menubar.View = function ( editor ) {
 	} );
 	options.add( option );
 	
-	var show = new UI.THREE.Boolean( true , "Show grid").onChange( update );
+	
+	// Show grid
+	var showGrid = false;
+	var option = new UI.Row();
+	option.setClass('option');
+	option.setTextContent('Toggle grid');
+	option.onClick(function(){
+		signals.showGridChanged.dispatch(showGrid);
+		showGrid = !showGrid;
+	})
+	options.add(option)
+	
+	/*var show = new UI.THREE.Boolean( true , "Show grid").onChange( update );
 	options.add( show );
 	function update() {
 		signals.showGridChanged.dispatch( show.getValue() );
-	}
+	}*/
 	
 	return container;
 
