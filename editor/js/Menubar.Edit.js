@@ -83,7 +83,45 @@ Menubar.Edit = function ( editor ) {
 	// ---
 
 	options.add( new UI.HorizontalRule() );
-
+	
+	var clipboard = undefined;
+	
+	// Cut
+	var option = new UI.Row();
+	option.setClass('option');
+	option.setTextContent('cut');
+	option.onClick(function(){
+		if(editor.selected.parent === undefined) return;
+		clipboard = editor.selected.clone();
+		editor.execute(new RemoveObjectCommand(this.selected));
+	})
+	options.add(option);
+	
+	//Copy
+	var option = new UI.Row();
+	option.setClass('option');
+	option.setTextContent('copy')
+	option.onClick(function(){
+		if(editor.selected.parent === undefined) return;
+		clipboard = editor.selected.clone();
+	})
+	options.add(option)
+	
+	// Paste
+	var option = new UI.Row();
+	option.setClass( 'option' );
+	option.setTextContent( 'paste' );
+	option.onClick(function(){
+		if(clipboard!=undefined){
+			editor.execute(new AddObjectCommand(clipboard))
+		}
+	})
+	options.add(option);
+	
+	// ---
+	
+	options.add(new UI.HorizontalRule());
+	
 	// Clone
 
 	var option = new UI.Row();
