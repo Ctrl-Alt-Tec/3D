@@ -58,7 +58,7 @@ select:hover {
 
 #viewport {
 	position: fixed;
-	top: 32px;
+	top: 0;
 	left: 0;
 	right: 0;
 	/*right: 300px;*/
